@@ -75,27 +75,37 @@
     </header> -->
 
     <!-- main section / menu-food-cart section -->
-    <section class="container mx-auto">
+    <main class="container mx-auto">
       <div class="grid grid-cols-12 h-52">
+        <!-- btns -->
         <div class="col-span-12 md:col-span-2 rounded-xl bg-[#FEBF00] p-6">
           <div class="divider"></div>
           <!-- btn container -->
-          <div id="btn_container" class="flex flex-wrap gap-2"></div>
+          <div
+            id="btn_container"
+            class="flex flex-wrap gap-2 sticky top-20"
+          ></div>
         </div>
+        <!-- categories -->
         <div class="col-span-8 md:col-span-7 rounded-xl p-6">
           <div class="divider"></div>
-          <div id="cards_container">
-           
+          <!-- spinner -->
+          <div
+            id="loading_spinner"
+            class="min-h-[60vh] flex flex-col justify-center items-center bg-white hidden"
+          >
+            <span class="loading loading-dots loading-xl"></span>
           </div>
+          <div id="cards_container" class="gap-5"></div>
         </div>
+        <!-- cart -->
         <div
-          class="col-span-4 md:col-span-3 border-[#FEBF00] border-1 rounded-xl p-6"
+          class="col-span-4 md:col-span-3 border-[#FEBF00] border-1 rounded-xl p-6 sticky top-20"
         >
           <div class="divider"></div>
           <div class="grid grid-cols-1 gap-5" id="cart-container">
             <!-- sample cart  -->
           </div>
-
           <div class="bg-[#FEBF00] mt-10">
             <h2 class="p-3 text-white font-bold">
               Total $<span id="cart-total">0</span>BDT
@@ -103,7 +113,22 @@
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- You can open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_3.showModal()">open modal</button> -->
+      <dialog id="my_modal_3" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <form method="dialog">
+            <button
+              class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
+              ✕
+            </button>
+          </form>
+          <div class="" id="details-container"></div>
+        </div>
+      </dialog>
+    </main>
 
     <!-- js file link -->
     <script src="./js/index.js"></script>
