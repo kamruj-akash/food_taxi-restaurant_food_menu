@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi Kitchen</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mooli&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind + daisyui  -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font awesome  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        font-family: "Mooli", sans-serif;
+      }
+
+      .bg-art {
+        background: linear-gradient(
+            rgba(255, 252, 252, 0.884),
+            rgba(255, 252, 252)
+          ),
+          url("assets/bg.png");
+        background-size: 400px; /* make image cover full area */
+        background-position: center; /* center the image */
+        background-attachment: fixed;
+      }
+      .active {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-art">
+    <!-- <header
+      class="flex flex-col gap-5 justify-center items-center min-h-screen"
+    >
+      <div class="">
+        <img src="./assets/logo.png" alt="" class="w-[450px]" />
+      </div>
+
+      <div
+        class="w-20 h-20 flex items-center justify-center animate-bounce bg-[#FEBF00] mt-10 rounded-full shadow-xl justify-self-end"
+      >
+        <i class="fa-solid fa-arrow-down text-xl"></i>
+      </div>
+      <h1
+        class="w-full sticky bottom-0 text-center text-xl font-bold p-4 bg-[#FEBF00] rounded"
+      >
+        Digital Menu Card For Our Lovely Customer
+      </h1>
+    </header> -->
+
+    <!-- main section / menu-food-cart section -->
+    <section class="container mx-auto">
+      <div class="grid grid-cols-12 h-52">
+        <div class="col-span-12 md:col-span-2 rounded-xl bg-[#FEBF00] p-6">
+          <div class="divider"></div>
+          <!-- btn container -->
+          <div id="btn_container" class="flex flex-wrap gap-2"></div>
+        </div>
+        <div class="col-span-8 md:col-span-7 rounded-xl p-6">
+          <div class="divider"></div>
+          <div id="cards_container">
+           
+          </div>
+        </div>
+        <div
+          class="col-span-4 md:col-span-3 border-[#FEBF00] border-1 rounded-xl p-6"
+        >
+          <div class="divider"></div>
+          <div class="grid grid-cols-1 gap-5" id="cart-container">
+            <!-- sample cart  -->
+          </div>
+
+          <div class="bg-[#FEBF00] mt-10">
+            <h2 class="p-3 text-white font-bold">
+              Total $<span id="cart-total">0</span>BDT
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- js file link -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
